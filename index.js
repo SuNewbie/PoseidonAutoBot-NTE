@@ -44,8 +44,8 @@ function delay(seconds) {
 }
 
 async function countdownDelay() {
-  const minSeconds = 240; 
-  const maxSeconds = 450; 
+  const minSeconds = 120; 
+  const maxSeconds = 240; 
   const waitTime = Math.floor(Math.random() * (maxSeconds - minSeconds + 1)) + minSeconds;
   let remaining = waitTime;
 
@@ -617,5 +617,6 @@ async function run() {
     await delay(86400);
   }
 }
+
 
 run().catch(error => logger.error(`Fatal error: ${error.message}`, { emoji: '❌' }));
